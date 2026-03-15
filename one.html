@@ -1,238 +1,73 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile & Skills</title>
+    <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body {
-            font-family: 'Kanit', sans-serif;
-            background-color: #beff45;
-            color: black;
-            /* ลายจุด Background */
-            background-image: radial-gradient(black 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-
-        /* Brutalist Card Style */
-        .brutal-card {
-            background: white;
-            border: 4px solid black;
-            box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .brutal-card:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
-        }
-
-        /* Brutalist Button */
-        .brutal-btn {
-            background: white;
-            border: 3px solid black;
-            box-shadow: 4px 4px 0px 0px black;
-            transition: all 0.1s;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            cursor: pointer;
-            text-decoration: none;
-            color: black;
-        }
-
-        .brutal-btn:active {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0px 0px black;
-        }
-
-        .brutal-btn.primary {
-            background-color: black;
-            color: #beff45;
-        }
-
-        .brutal-btn.primary:hover {
-            background-color: #333;
-        }
-
-        .skill-tag {
-            background: #beff45;
-            border: 2px solid black;
-            padding: 0.25rem 0.75rem;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 2px 2px 0px 0px black;
-        }
-
-        /* Image Frames */
-        .photo-frame {
-            border: 4px solid black;
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            background-color: #f0f0f0;
-        }
-    </style>
+    
+    <!-- เชื่อมต่อไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+<body class="flex flex-col items-center justify-center relative">
 
-<body class="min-h-screen p-4 md:p-8">
+    <!-- Navigation Menu -->
+    <div class="nav-container">
+        <div class="nav-menu">
+            <div class="logo-text">MY PORTFOLIO</div>
+            <div class="flex gap-2">
+                <a href="one.html" class="nav-item">ประวัติ</a>
+                <a href="two.html" class="nav-item">โปรเจค</a>
+                <a href="three.html" class="nav-item">รางวัลและกิจกรรม</a>
+                <a href="four.html" class="nav-item">ติดต่อ</a>
+            </div>
+        </div>
+    </div>
 
-    <!-- Header Navigation (Top Bar) -->
-    <div class="max-w-6xl mx-auto mb-10 flex flex-col md:flex-row justify-between items-center gap-4">
-        <!-- ปุ่มซ้าย: กลับหน้าหลัก -->
-        <a href="index.html" class="brutal-btn px-6 py-3 text-lg">
-            <i data-lucide="home"></i> หน้าหลัก
-        </a>
+    <!-- Marquee -->
+    <div class="marquee-wrapper">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+            </div>
+            <div class="marquee-content">
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+                <span class="marquee-item">PUNNAPOB</span>
+                <span class="marquee-item">ROONGWATTANAPAK</span>
+            </div>
+        </div>
+    </div>
 
-        <!-- หัวข้อตรงกลาง -->
-        <h1
-            class="text-4xl md:text-5xl font-extrabold uppercase tracking-tighter bg-black text-[#beff45] px-6 py-2 rotate-2 shadow-[4px_4px_0px_0px_white]">
-            ABOUT ME
-        </h1>
+    <!-- Main Content -->
+    <div class="flex flex-col items-center justify-center z-10 space-y-10 mt-10">
+        <div class="profile-image-container">
+            <img 
+                src="images/me.png" 
+                alt="Profile Picture" 
+                class="profile-image"
+                onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Felix'"
+            >
+        </div>
 
-        <!-- ปุ่มขวา: ไปหน้าโปรเจกต์ (เพิ่มให้กดง่ายๆ จากด้านบน) -->
-        <a href="two.html" class="brutal-btn px-6 py-3 text-lg">
-            โปรเจกต์ <i data-lucide="arrow-right"></i>
+        <a href="one.html" class="cta-button px-10 py-4 text-2xl font-bold rounded-full flex items-center gap-3 cursor-pointer no-underline">
+            <span>เข้าชมพอร์ตฟอลิโอ</span>
+            <i data-lucide="arrow-right" class="w-6 h-6"></i>
         </a>
     </div>
 
-    <!-- Main Grid Layout -->
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 mb-12">
+    <div class="bottom-shadow"></div>
 
-        <!-- 1. Profile Summary (Left, Wide) -->
-        <div class="md:col-span-8 brutal-card p-6 md:p-8 flex flex-col justify-center relative overflow-hidden">
-
-            <!-- Name Section -->
-            <div class="mb-5 border-b-4 border-black border-dashed pb-4">
-                <h2 class="text-3xl md:text-4xl font-black leading-tight mb-3">ปุณณภพ รุ่งวัฒนภักดิ์</h2>
-                <div class="flex items-center gap-3 flex-wrap">
-                    <span
-                        class="bg-black text-[#beff45] px-3 py-1 font-bold transform -rotate-2 inline-block border-2 border-transparent">ชื่อเล่น:
-                        กัปตัน</span>
-                    <span
-                        class="font-bold text-lg bg-[#beff45] text-black px-3 py-1 border-2 border-black inline-block transform rotate-1">อายุ
-                        21 ปี</span>
-                </div>
-            </div>
-
-            <h3 class="text-xl font-bold mb-3 flex items-center gap-2 text-gray-700">
-                <i data-lucide="user" class="w-6 h-6"></i> Profile Summary
-            </h3>
-            <p class="text-lg leading-relaxed text-gray-800">
-                นักศึกษาวิทยาการคอมพิวเตอร์ ชั้นปีที่ 3 สนใจงานพัฒนาซอฟต์แวร์ทั้งส่วนหน้าบ้านและระบบหลังบ้าน
-                รวมถึงการเรียนรู้ด้านโครงสร้างพื้นฐานของระบบ (Infrastructure) มีประสบการณ์จากการทำโปรเจกต์ทั้ง Web
-                Application และ Software System ในระดับการเรียนรู้ และกำลังพัฒนาความเข้าใจการทำงานของระบบโดยรวม
-                เป็นผู้ที่เปิดรับเทคโนโลยีใหม่ ๆ พร้อมเรียนรู้จากทีมงาน
-                และมุ่งมั่นพัฒนาตนเองเพื่อช่วยสนับสนุนการพัฒนาซอฟต์แวร์ให้มีคุณภาพมากขึ้น
-            </p>
-            <!-- Decorative Icon -->
-            <i data-lucide="quote" class="absolute top-4 right-4 w-20 h-20 text-gray-100 -z-10 rotate-12"></i>
-        </div>
-
-        <!-- Image 1 (Right Top) -->
-        <div class="md:col-span-4 h-64 md:h-auto brutal-card p-0 rotate-1">
-            <img src="images/me.png" alt="Activity 1" class="photo-frame"
-                onerror="this.src='https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=500&q=80'">
-        </div>
-
-        <!-- 2. Education (Left Middle) -->
-        <div class="md:col-span-5 brutal-card p-6 bg-black text-white">
-            <h2 class="text-2xl font-bold mb-4 text-[#beff45] border-b-4 border-[#beff45] inline-block pb-1">
-                Education
-            </h2>
-            <div class="space-y-4">
-                <div>
-                    <h3 class="text-xl font-bold">ปริญญาตรี วิทยาการคอมพิวเตอร์</h3>
-                    <p class="text-[#beff45]">2023 - ปัจจุบัน</p>
-                    <p class="font-semibold mt-1">Huachiew Chalermprakiet University</p>
-                    <p class="text-sm opacity-80">กำลังศึกษาอยู่ชั้นปีที่ 3</p>
-                    <div class="mt-2 inline-block bg-white text-black font-bold px-3 py-1 border-2 border-[#beff45]">
-                        GPA: 3.31
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Image 2 (Center Middle) -->
-        <div class="md:col-span-3 h-64 md:h-auto brutal-card p-0 -rotate-2">
-            <img src="images/2.png" alt="Activity 2" class="photo-frame"
-                onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&q=80'">
-        </div>
-
-        <!-- 3. Technical Skills (Right Middle/Bottom) -->
-        <div class="md:col-span-4 md:row-span-2 brutal-card p-6">
-            <h2 class="text-2xl font-bold mb-6 border-b-4 border-black inline-block">Technical Skills</h2>
-
-            <div class="space-y-6">
-                <div>
-                    <h3 class="font-bold text-lg mb-2 flex items-center gap-2"><i data-lucide="code-2"
-                            class="w-5 h-5"></i> Languages</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">HTML5/CSS3</span>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-2 flex items-center gap-2"><i data-lucide="box" class="w-5 h-5"></i>
-                        Frameworks</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">React.js</span>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-2 flex items-center gap-2"><i data-lucide="database"
-                            class="w-5 h-5"></i> Database & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">VS Code</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-2 flex items-center gap-2"><i data-lucide="sparkles"
-                            class="w-5 h-5"></i> Other</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag">AI-Assisted Dev</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Image 3 (Bottom Left) -->
-        <div class="md:col-span-4 h-56 md:h-auto brutal-card p-0">
-            <img src="images/3.png" alt="Activity 3" class="photo-frame"
-                onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&q=80'">
-        </div>
-
-        <!-- Call to Action Area (Bottom Middle - เด่นและเห็นง่าย) -->
-        <div
-            class="md:col-span-4 flex flex-col justify-center items-center p-4 bg-white border-4 border-black shadow-[8px_8px_0px_0px_black] transform rotate-1">
-            <div class="text-center mb-3 font-bold text-lg animate-bounce">
-                ดูผลงานของผมต่อเลย! 👇
-            </div>
-            <a href="two.html" class="brutal-btn primary w-full py-4 text-xl no-underline">
-                ไปหน้าโปรเจกต์ <i data-lucide="arrow-right-circle" class="w-6 h-6"></i>
-            </a>
-        </div>
-
-    </div>
-
-    <script>
-        lucide.createIcons();
-    </script>
+    <!-- เชื่อมต่อไฟล์ JS -->
+    <script src="script.js"></script>
 </body>
-
 </html>
